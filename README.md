@@ -1,5 +1,7 @@
 # Stadium
 
+####  A testing ground for reinforcement learning environments and algorithms.
+
 <img src="assets/idle2_.gif" width="500"> 
 
 
