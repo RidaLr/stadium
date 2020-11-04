@@ -1,30 +1,41 @@
-# *RL* Package
+# Stadium
 
-### (09/06) Overhaul that includes [stable-baselines](https://github.com/hill-a/stable-baselines) GUI integration will be posted in the upcoming month.
+<img src="assets/idle2_.gif" width="500"> 
 
-<img src="assets/gui.gif" width="500"> 
 
-This package contains:  
 
-- A GUI for *OpenAI gym* environments where agents can be configured, trained and tested using the same simple interface with a basic implementation of [PPO](https://openai.com/blog/openai-baselines-ppo/).
-- Contains a wrapper class for  Reinforcement Learning library that adds functionality for logging, loading and configuring RL models, network architectures and environments in a simple way.
+
+
+
+
+## Features:
+
+- A PyQt5 based graphical user interface for *OpenAI gym* environments where agents can be configured, trained and tested.
+- Contains a wrapper class for [stable-baselines](https://github.com/hill-a/stable-baselines) Reinforcement Learning library that adds functionality for logging, loading and configuring RL models, network architectures and environments in a simple way.
+- Tensorboard integration.
 - Detailed instructions and examples on how to create your own custom reinforcement learning environments.
 - Scripts for training, testing, retraining models and scheduling experiments.
 
-**Note**: The GUI does not use *stable-baselines*, it uses a custom PPO implementation that is found in *rl/algorithms/*, therefore the usage is different. 
+<img src="assets/snake_tb.png" width="500"> 
+<!-- **Note**: The GUI does not use *stable-baselines*, it uses a custom PPO implementation that is found in *rl/algorithms/*, therefore the usage is different.  -->
+
+---
 
 ## Dependencies:
-
+```
 - numpy==1.16.2
 - tensorflow==1.13.1
 - gym[all]
 - opencv-python
-- stable_baselines  (follow the installation instructions [here](https://stable-baselines.readthedocs.io/en/master/guide/install.html))
+- stable_baselines
 - pyyaml
   
-**GUI**
+-GUI-
 - PyQt5
 - pyqtgraph
+```
+
+----
 
 ## Installation
 
@@ -32,14 +43,18 @@ To install the package and all dependencies:
 
 ```
 git clone https://github.com/andriusbern/RL
+conda install -f requirements.yml
+conda activate stadium
 pip install -e .
 ```
+
+---
 
 ## Usage:
 
 1. To run the *gym GUI*:
 ```
-python rl/algorithms/Interface.py
+python stadium.py
 ```
 
 2. Instructions for running the stable-baselines part of this package and how to create custom reinforcement learning environments can be found in the instructions.md or instructions.pdf.
